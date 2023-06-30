@@ -1,7 +1,129 @@
-*{
-    margin: 0;
-    padding: 0;
+*, *::before, *::after {
+    box-sizing: border-box;
     text-decoration: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    scroll-behavior: smooth;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #A4D0A4;
+}
+
+header {
+    padding: .8rem;
+    background-color: #F7E1AE;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #A4D0A4;
+    background-color: #FFF8D6;
+    color: #617A55;
+}
+
+.logo-span {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.navbar {
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+}
+
+.navbar > a{
+    margin: .2rem;
+    padding: .5rem;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: #617A55;
+    /* border: 1px solid black; */
+    transition: .5s ease;
+}
+
+.navbar > a:hover{
+    color: #A4D0A4;
+}
+
+.home {
+    padding: .8rem 100vw;
+    background: linear-gradient(#A4D0A4, #617A55);
+}
+
+.carousel {
+    width: 75vw;
+    height: 75vh;
+    position: relative;
+    box-shadow: 0px 3px 8px 6px;
+}
+
+.carousel > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: .5s opacity ease-in-out;
+    transition-delay: .5s;
+}
+
+.slide > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.slide[data-active] {
+    opacity: 1;
+    z-index: 1;
+    transition-delay: 0s;
+}
+
+.carousel-btn {
+    position: absolute;
+    z-index: 2;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, .5);
+    cursor: pointer;
+    border-radius: .25rem;
+    padding: 0 .5rem;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.carousel-btn:hover, .carousel-btn:focus {
+    color: white;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.carousel-btn:focus {
+    outline: 1px solid black;
+}
+
+.carousel-btn.prev {
+    left: 1rem;
+}
+
+.carousel-btn.next {
+    right: 1rem;
+}

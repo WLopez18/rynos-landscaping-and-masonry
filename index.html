@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rynos Landscaping and Masonry LLC</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://kit.fontawesome.com/c52606b8d2.js" crossorigin="anonymous"></script>
+    <script src="./script.js" defer></script>
 </head>
 <body>
     <!-- Sticky header and navbar. -->
     <header>
-        <a href="#" class="logo">Rynos Landscaping and Masonry LLC</a>
+        <a href="#" class="logo"><span class="logo-span">Rynos</span> Landscaping and Masonry LLC</a>
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
@@ -20,8 +22,58 @@
     </header>
     
     <!-- Image carousel that cycles through preselected images of past projects. -->
-    <section class="home" id="home">
-        <img src="#" alt="">
+    <section class="home" id="home" aria-label="Project Photos">
+        <div class="carousel" data-carousel>
+            <button class="carousel-btn prev" data-carousel-btn="prev"><i class="fa-solid fa-square-caret-left"></i></button>
+            <button class="carousel-btn next" data-carousel-btn="next"><i class="fa-solid fa-square-caret-right"></i></button>
+        <ul data-slides>
+            <li class="slide" data-active>
+                <img src="./imgs/1.jpg" alt="Steps and sidewalk">
+            </li>
+            <li class="slide">
+                <img src="./imgs/2.jpg" alt="Mulch">
+            </li>
+            <li class="slide">
+                <img src="./imgs/3.jpg" alt="Planting and Mulch">
+            </li>
+            <li class="slide">
+                <img src="./imgs/4.jpg" alt="Sidewalk, mulch, and recreational area">
+            </li>
+            <li class="slide">
+                <img src="./imgs/5.jpg" alt="Sidewalk, mulch, and planting">
+            </li>
+            <li class="slide">
+                <img src="./imgs/6.jpg" alt="Pool patio">
+            </li>
+            <li class="slide">
+                <img src="./imgs/7.jpg" alt="Masonry steps and paver sidewalk">
+            </li>
+            <li class="slide">
+                <img src="./imgs/8.jpg" alt="Retaining wall and vinyl fence">
+            </li>
+            <li class="slide">
+                <img src="./imgs/9.jpg" alt="Barbecue pavers patio">
+            </li>
+            <li class="slide">
+                <img src="./imgs/10.jpg" alt="Mulch and decoration">
+            </li>
+            <li class="slide">
+                <img src="./imgs/11.jpg" alt="Vinyl fencing">
+            </li>
+            <li class="slide">
+                <img src="./imgs/12.jpg" alt="Masonry steps, paver sidewalk, stacked block stairs">
+            </li>
+            <li class="slide">
+                <img src="./imgs/13.jpg" alt="New planting and mulch">
+            </li>
+            <li class="slide">
+                <img src="./imgs/14.jpg" alt="Paver patio">
+            </li>
+            <li class="slide">
+                <img src="./imgs/15.jpg" alt="Tree planting">
+            </li>
+        </ul>
+    </div>
     </section>
 
     <!-- About section, describing how long the company has been in service, services provided, and materials particularly used. -->
