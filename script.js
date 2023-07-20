@@ -17,3 +17,24 @@ buttons.forEach(btn => {
         delete activeSlide.dataset.active;
     });
 });
+
+
+// Services grid JS
+
+function toggleAside(asideId) {
+    console.log(asideId)
+    let aside = document.getElementById(asideId);
+    
+    // Get all aside elements
+    let asides = document.getElementsByClassName('aside');
+    
+    // Hide all the aside elements
+    for (let i = 0; i < asides.length; i++) {
+        if (asides[i] !== aside) {
+            asides[i].style.display = 'none';
+        }
+    }
+    
+    // Toggle selected aside
+    aside.style.display = (aside.style.display === 'none') ? 'block' : 'none';
+}

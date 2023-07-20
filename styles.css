@@ -11,7 +11,8 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: #A4D0A4;
+    background-color: #617A55;
+    overflow-x: hidden;
 }
 
 header {
@@ -37,7 +38,6 @@ header {
 }
 
 .navbar {
-    /* border: 1px solid black; */
     display: flex;
     align-items: center;
 }
@@ -48,12 +48,14 @@ header {
     font-size: 1.2rem;
     font-weight: bolder;
     color: #617A55;
-    /* border: 1px solid black; */
     transition: .5s ease;
+    border: 2px solid #617A55;
+    border-radius: 12px;
 }
 
 .navbar > a:hover{
     color: #A4D0A4;
+    background-color: #617A55;
 }
 
 .home {
@@ -126,4 +128,118 @@ header {
 
 .carousel-btn.next {
     right: 1rem;
+}
+
+.about {
+    height: 100vh;
+    margin: 3rem;
+    display: flex;
+    align-items: center;
+}
+.about-content {
+    padding: 3rem;
+    display: flex;
+    background-color: #A4D0A4;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.about-content > p {
+    font-size: larger;
+}
+
+/* TOGGLE THIS LATER --- SERVICE INFO GRID DISPLAY */
+
+.services {
+    width: 100%;
+    height: auto;
+    /* height: 100%; */
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 7rem;
+    background-color: #A4D0A4;
+}
+
+.container {
+    max-width: 100%;
+    display: flex;
+    margin: 1rem;
+    /* border: 1px solid black; */
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.grid-section {
+    max-width: 50%;
+    flex: 1;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.grid img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    border: 1px solid green;
+    transition: .3s ease-in;
+}
+
+.grid img:hover {
+    transform: scale(1.1);
+}
+
+.aside-section {
+    flex-basis: 30%;
+    margin-left: 10px;
+}
+
+.aside-section h3 {
+    margin-top: 1.5rem;
+}
+
+.aside-section p {
+    font-size: large;
+    text-align: center;
+}
+
+.aside {
+    display: none;
+    margin-left: 5rem;
+}
+
+.aside-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aside img {
+    max-width: 125%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .aside-section {
+        margin-left: 0;
+        margin-top: 10px;
+        flex-basis: unset;
+    }
+}
+
+.footer {
+    width: 100vw;
+    background-color: #F7E1AE;
+    display: flex;
+    justify-content: center;
 }
