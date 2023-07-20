@@ -16,11 +16,17 @@ body {
 }
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     padding: .8rem;
     background-color: #F7E1AE;
-    width: 100%;
+    padding: 10px;
     display: flex;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
     justify-content: space-between;
+    z-index:1000;
 }
 
 .logo {
@@ -42,7 +48,7 @@ header {
     align-items: center;
 }
 
-.navbar > a{
+.navbar > a {
     margin: .2rem;
     padding: .5rem;
     font-size: 1.2rem;
@@ -53,12 +59,25 @@ header {
     border-radius: 12px;
 }
 
-.navbar > a:hover{
+.navbar > a:hover {
     color: #A4D0A4;
     background-color: #617A55;
 }
 
+/* Add a class to highlight the active link */
+.navbar a.active {
+    font-weight: bold;
+    color: #F7E1AE; /* You can change the color to your preferred highlight color */
+    background-color: #617A55;
+}
+
+/* Add some space to the page content so that it's not covered by the fixed header */
+.page-content {
+    padding-top: 50px;
+}
+
 .home {
+    margin-top: 6.5rem;
     padding: .8rem 100vw;
     background: linear-gradient(#A4D0A4, #617A55);
 }
@@ -242,4 +261,31 @@ header {
     background-color: #F7E1AE;
     display: flex;
     justify-content: center;
+}
+
+.contact-content {
+    background-color: #A4D0A4;
+    margin: 5rem;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-content a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    background-color: #617A55;
+    border: 1px solid black;
+    margin: .5rem;
+    padding: .5rem 7rem;
+}
+
+.contact-content a:hover {
+    box-shadow: 1px 1px 6px 2px;
+}
+
+.contact-content a:active {
+    box-shadow: none;
 }
